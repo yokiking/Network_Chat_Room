@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<!-- InstanceBegin template="/Templates/cs905.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>CS905</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+.style1 {font-size: small}
+-->
+</style>
+</head><body>
+<h1 align="center">CS9053 Introduction to Java</h1>
+<!-- InstanceBeginEditable name="Body" -->
+<h2>Chat Room </h2>
+<h3>Focus</h3>
+<ul>
+  <li>Concurrency</li>
+  <li>Networking</li>
+  <li>GUI</li>
+</ul>
+<h3>Overview</h3>
+<blockquote>
+  <p>Write a chat room server and client. </p>
+</blockquote>
+<h3>Server</h3>
+<ul>
+  <li>The chat server's primary job is to pass messages from all clients to all clients. </li>
+  <li>The server will need to
+    <ul>
+      <li>allow connections from clients.</li>
+      <li>Get a "handle" for the client </li>
+      <li>receive messages</li>
+      <li>send the messages to all connected clients.</li>
+    </ul>
+  </li>
+</ul>
+<h3>Client</h3>
+<ul>
+  <li>Allow users to connect to server.</li>
+  <li>Accept input text from user and pass it to server </li>
+  <li>Receive and display  dialog from server</li>
+  <li>Send a message when user disconnects.</li>
+</ul>
+<h3>Options</h3>
+<ul>
+  <li>Maintain registry of users. Provide registration.</li>
+  <li>Have multiple chat rooms</li>
+  <li>Log chat room dialogs</li>
+</ul>
+<h3>Notes</h3>
+<p>In order for the server to know that the client is "signing off", the client should send  a message to the server saying so.</p>
+<p>If the client closes the socket without informing the server, then 
+the next time the server attempts a read, it should detect the 
+end-of-file. Similarly, a write should result in an error.</p>
+<p>The methods isClosed and isConnected will not work to determine if the connection has been terminated by the other end.</p>
+<!-- InstanceEndEditable -->
+<p><a href="http://cis.poly.edu/jsterling/cs905" class="style1">Home</a></p>
+<hr>
+<p class="style1">Maintained by <a href="http://cis.poly.edu/jsterling">John Sterling</a> (<a href="mailto:jsterling@poly.edu">jsterling@poly.edu</a>)  </p>
+<!-- InstanceEnd --></body></html>
